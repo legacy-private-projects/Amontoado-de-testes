@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha() {
+
+    document.write("<br>");
+    document.write("<br>");
+}
+
+function mostra(frase) {
+
+    document.write(frase);
+    pulaLinha();
+}
+
+//O comando 'prompt' le o retorno como string menos sendo um numero
+
+
+var vitorias = parseInt (prompt("Entre com o númerode vitórias."));
+var empates = parseInt (prompt("Entre com o númerode empates."));
+
+//Usar um calculo de '*' ou '/' ja resolve o problema
+//var pontos = (vitorias * 3) + (empates * 1);
+var pontos = (vitorias * 3) + empates;
+//o comando 'parseInt' converte direto a string para numero
+
+var anoPassado = 28
+
+mostra("Seu time somou o total de " + pontos + " pontos");
+
+if (pontos > anoPassado) {
+mostra("seu time esta melhor que o ano passado.");
+}
+if (pontos < anoPassado) {
+mostra("seu time esta pior que o ano passado.");
+}
+if (pontos == anoPassado) {
+mostra("seu time esta igual ao ano passado.");
+}
+
+
+</script>

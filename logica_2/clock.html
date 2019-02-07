@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	
+	var segundo = 1;
+	var minuto = 0;
+	var hora =  0;
+	var dias = 0;
+
+	function limpaTela() {
+		document.body.innerHTML = "";
+	}
+
+	function relogio(){
+		limpaTela();
+		document.write(hora + ":" + minuto + ":" + segundo + "<br>");
+		if (dias > 1) {
+			document.write(" e " + dias + " dias");
+		}
+		segundo++;
+
+		if (segundo == 60) {
+			segundo = 0;
+			minuto = minuto + 1;
+		}
+		if (minuto == 60) {
+			minuto = 0;
+			hora = minuto + 1;
+		}
+		if (hora == 24) {
+			hora = 0;
+			dias++;
+		}
+		
+	}
+	
+
+	setInterval(relogio, 1);
+</script>
